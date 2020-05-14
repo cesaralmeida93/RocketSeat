@@ -2,16 +2,26 @@
 // das notas entre os alunos e envia
 //mensagem do cálculoda média.
 
-const aluno01 = 'César'
-const notaAluno01 = 9.8
+const alunos = [
+    {
+        nome: "Cesar",
+        nota: 9.8
+    },
+    {
+        nome: "Bruno",
+        nota: 10
+    },
+    {
+        nome: "Heitor",
+        nota: 2
+    }
+]
 
-const aluno02 = 'Will'
-const notaAluno02 = 10
+const nomesDeAlunos = ["Cesar", "Bruno", "Heitor"]
 
-const aluno03 = 'Biel'
-const notaAluno03 = 2
+console.log(alunos)
 
-const media = (notaAluno01 + notaAluno02 + notaAluno03) / 3
+const media = (alunos[0].nota + alunos[1].nota + alunos[2].nota) / 3
 
 
 // Se a média for maior que 5, parabenizar a turma
