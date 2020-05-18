@@ -22,8 +22,8 @@ function getHigherTransactionByType(type) {
     let higherTransaction
     let higherValue = 0
 
-    for (let transaction of user.transactions) {
-        if (transaction.type == type && transaction.value > higherValue) {
+    if (transaction.type == type && transaction.value > higherValue) {
+        for (let transaction of user.transactions) {
             higherValue = transaction.value
             higherTransaction = transaction
         }
