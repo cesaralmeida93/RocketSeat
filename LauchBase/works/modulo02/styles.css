@@ -1,7 +1,8 @@
 @import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap";
 
 :root {
-    --color-green: #50FA7B
+    --color-green: #50FA7B;
+    --color-rocket: #7159c1;
 }
 
 * {
@@ -82,4 +83,41 @@ footer {
 
 #links-footer a {
     border-bottom: 1px solid var(--color-green);
+}
+
+/*=== CARDS ===*/
+/*https://img.youtube.com/vi/GykTLqODQuU/maxresdefault.jpg*/
+
+.cards {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-rocket);
+}
+
+.card_image_container img {
+    width: 100%;
+}
+
+.card_content,
+.card_info {
+    padding: 24px;
+}
+
+.card_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card_price {
+    background-color: var(--color-rocket);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
 }
