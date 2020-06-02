@@ -1,0 +1,13 @@
+ 1030  npm install express
+ 1031  npm install @types/express -D
+ 1032  npm install ts-node -D
+ 1033  npx ts-node
+ 1034  npx ts-node src/server.ts 
+ 1035  npm install typescript -D
+ 1036  npx tsc --init
+ 1037  npx ts-node src/server.ts 
+ 1038  npm install ts-node-dev -D
+ 1039  npx ts-node-dev src/server.ts
+ 1040  npm run dev
+ 1042  npx create-react-app web --template=typescript
+ 1043   npm start
