@@ -1,27 +1,43 @@
- 1082  yarn add express
- 1083  node index.js 
- 1084  yarn add nodemon -D
- 1085  yarn dev
- 1086  node -v
- 1087  npm -v
- 1088  yarn -v
- 1089  cd Documents/cursos/RocketSeat/
- 1090  ls
- 1091  ls NLW1/
- 1092  cd ..
- 1093  cd RocketSeat/
- 1094  rm -rf NLW1/
- 1095  mkdir bootcamp2019
- 1096  ls
- 1097  cd bootcamp2019/
- 1098  nkdir modulo01
- 1099  mkdir modulo01
- 1100  cd modulo01/
- 1101  yarn init -y
- 1102* 
- 1103  code .
- 1104  yarn dev
- 1105  ls
- 1106  cd ..
- 1107  mkdir desafio01
- 1108  history
+yarn init -y
+code .
+yarn add express
+node src/server.js 
+yarn add sucrase nodemon -D
+criar nodemon.json na raiz do projeto
+criar os scripts dev e dev:debun no package.json
+yarn sucrase-node src/server.js 
+yarn dev
+yarn dev:debug
+
+----------------------------------------------DOCKER---------------------------------------------------------------------------------------------------
+docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres:11
+docker ps
+instalar postbird
+login e senha -> database, docker
+criar banco gobarber
+docker stop database
+docker ps -a
+docker start database
+docker logs database
+----------------------------------------------SEQUELIZE------------------------------------------------------------------------------------------------
+ORM -> Abstração do banco de dados
+MIGRATIONS -> Controle de versão para base de dados
+SEEDS -> População da base de dadospara desenvolvimento
+----------------------------------------------MVC------------------------------------------------------------------------------------------------------
+MODEL -> Armazena a abstração do banco, manipula os dados contidos nas tabelas do banco. Não possuem responsabilidadessobre a regra de negócio
+CONTROLLER -> Ponto de entrada das requisições, uma rota geralmente estáassociada diretamente com um métododo controller.
+VIEW -> Retorno ao cliente, nesse caso JSON que será retornadoao front-end.
+
+cada entidade tem um Controller.
+----------------------------------------------ESLINT, PRETTIER, EDITORCONFIG---------------------------------------------------------------------------
+yarn add eslint -D
+yarn eslint --init
+instalar no vsCode o plugon eslint
+editar o arquivo .eslintrc
+editar o arquivo settings.json
+deletar o lock.json gerado
+yarn
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+yarn eslint --fix src --ext .js
+baixar no vscode o plugin editorconfig
+editar o arquivo .editorconfig
