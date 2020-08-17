@@ -29,7 +29,7 @@ CONTROLLER -> Ponto de entrada das requisições, uma rota geralmente estáassoc
 VIEW -> Retorno ao cliente, nesse caso JSON que será retornadoao front-end.
 
 cada entidade tem um Controller.
-----------------------------------------------ESLINT, PRETTIER, EDITORCONFIG---------------------------------------------------------------------------
+----------------------------------------------CONFIG SEQUELIZE---------------------------------------------------------------------------
 yarn add eslint -D
 yarn eslint --init
 instalar no vsCode o plugon eslint
@@ -41,3 +41,24 @@ yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
 yarn eslint --fix src --ext .js
 baixar no vscode o plugin editorconfig
 editar o arquivo .editorconfig
+----------------------------------------------ESLINT, PRETTIER, EDITORCONFIG---------------------------------------------------------------------------
+yarn add sequelize
+yarn add sequelize-cli -D
+yarn add pg pg-hstore
+----------------------------------------------MIGRATIONS USUARIO---------------------------------------------------------------------------------------
+yarn sequelize migration:create --name=create-users
+yarn sequelize db:migrate
+yarn sequelize db:migrate:undo
+yarn sequelize db:migrate
+----------------------------------------------CRIPTOGRAFAR SENHA---------------------------------------------------------------------------------------
+yarn add bcryptjs
+----------------------------------------------JWT------------------------------------------------------------------------------------------------------
+JSON WEB TOKEN
+
+Headers, Payload, Assinatura
+yarn add jsonwebtoken
+----------------------------------------------JWT------------------------------------------------------------------------------------------------------
+JSON WEB TOKEN
+
+Headers, Payload, Assinatura
+yarn add jsonwebtoken

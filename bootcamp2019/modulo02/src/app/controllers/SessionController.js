@@ -5,7 +5,7 @@ import User from '../models/User';
 
 class SessionController {
   async store(req, res) {
-    const { email, password } = req.body;
+    const { email, password_hash } = req.body;
 
     const user = await User.findOne({ where: { email } });
 
@@ -13,7 +13,7 @@ class SessionController {
       return res.status(401).json({ error: 'User not found' });
     }
 
-    if (!user.checkPassword(password)) {
+    if (!user.checkPassword(password_hash)) {
       return res.status(401).json({ error: 'Password does not match' });
     }
 
