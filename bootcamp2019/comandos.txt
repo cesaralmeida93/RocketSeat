@@ -22,10 +22,10 @@ docker logs database
 ----------------------------------------------SEQUELIZE------------------------------------------------------------------------------------------------
 ORM -> Abstração do banco de dados
 MIGRATIONS -> Controle de versão para base de dados
-SEEDS -> População da base de dadospara desenvolvimento
+SEEDS -> População da base de dados para desenvolvimento
 ----------------------------------------------MVC------------------------------------------------------------------------------------------------------
 MODEL -> Armazena a abstração do banco, manipula os dados contidos nas tabelas do banco. Não possuem responsabilidadessobre a regra de negócio
-CONTROLLER -> Ponto de entrada das requisições, uma rota geralmente estáassociada diretamente com um métododo controller.
+CONTROLLER -> Ponto de entrada das requisições, uma rota geralmente está associada diretamente com um métododo controller.
 VIEW -> Retorno ao cliente, nesse caso JSON que será retornadoao front-end.
 
 cada entidade tem um Controller.
@@ -49,16 +49,20 @@ yarn add pg pg-hstore
 yarn sequelize migration:create --name=create-users
 yarn sequelize db:migrate
 yarn sequelize db:migrate:undo
+yarn sequelize db:migrate:undo:all
 yarn sequelize db:migrate
 ----------------------------------------------CRIPTOGRAFAR SENHA---------------------------------------------------------------------------------------
 yarn add bcryptjs
 ----------------------------------------------JWT------------------------------------------------------------------------------------------------------
 JSON WEB TOKEN
+Token dividido em 3 partes, Headers, Payload e Assinatura 
+Headers -> Tipo de tolken, algoritmo
+Payload -> Dados adicionais
+Assinatura -> Garante que o Token não foi editado
 
-Headers, Payload, Assinatura
-yarn add jsonwebtoken
-----------------------------------------------JWT------------------------------------------------------------------------------------------------------
-JSON WEB TOKEN
 
-Headers, Payload, Assinatura
 yarn add jsonwebtoken
+----------------------------------------------VALIDANDO DADOS DE ENTRADA-------------------------------------------------------------------------------
+YUP -> biblioteca de schema validation
+
+yarn add yup
