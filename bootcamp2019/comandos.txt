@@ -66,3 +66,5 @@ yarn add jsonwebtoken
 YUP -> biblioteca de schema validation
 
 yarn add yup
+----------------------------------------------CONFIGURANDO O MULTER------------------------------------------------------------------------------------
+yarn add multer
