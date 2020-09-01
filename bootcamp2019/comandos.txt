@@ -67,4 +67,27 @@ YUP -> biblioteca de schema validation
 
 yarn add yup
 ----------------------------------------------CONFIGURANDO O MULTER------------------------------------------------------------------------------------
+MultiPartFormData -> envio de arquivos
+Multer -> biblioteca responsável por facilitar envio de arquivos por requisição http
 yarn add multer
+----------------------------------------------AVATAR DO USUÁRIO----------------------------------------------------------------------------------------
+yarn sequelize migration:create --name=create-files
+yarn sequelize db:migrate  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
